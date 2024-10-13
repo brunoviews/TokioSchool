@@ -1,0 +1,112 @@
+/* Estilos del menú de navegación */
+nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff007f;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: black;
+    transition: ease 0.5s;
+    text-shadow: 0 0 5px rgba(11, 11, 11, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
+    background-color: white;
+    transform: scale(1.1);
+    margin: 15px;
+  }
+  
+  /* Estilos generales para el nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+  }
+  
+  /* Estilo del botón de menú */
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Estilo de las links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff007f;
+  }
+
+
+  /* Media Query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      color: #ff007f;
+      position: static;
+    }
+  
+    .nav-links {
+      height: 0;
+     overflow:hidden; 
+      transition: height 0.3s ease-in-out;
+      flex-direction: column;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      background-color: #20232a;
+      z-index: 10;
+      padding: 0;
+      align-items: center;
+
+      
+    }
+  
+    .nav-links.open {
+      height: 250px; /* Cambia este valor según el tamaño de tu menú */
+      align-items: center;
+
+    }
+  
+    .nav-links a {
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      
+    }
+}

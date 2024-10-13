@@ -14,10 +14,10 @@ const SobreNosotros = () => {
         <div className="container-inicio">
           <h1 className="title">Conócenos</h1>
           <p>
-            En <strong className="mini-logo">Lunia Z</strong>, no solo nos enfocamos en el desarrollo de nuestro
-            principal videojuego, sino que también estamos involucrados en la
+            En <strong className="mini-logo">Lunia Gaming Zone</strong>, no solo nos enfocamos en el desarrollo de nuestro
+            principal videojuego (Lunia Z), sino que también estamos involucrados en la
             creación de otros proyectos emocionantes. Nos especializamos en tres
-            categorías clave dentro del mundo de los videojuegos.
+            categorías clave dentro del mundo de los videojuegos. A continuación, te presentamos algunos de estos proyectos.
           </p>
         </div>
 

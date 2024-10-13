@@ -11,7 +11,7 @@ import Inicio from "./pages/Inicio";
 import Galeria from "./pages/Galeria";
 import SobreNosotros from "./pages/SobreNosotros";
 import Servicios from "./pages/Servicios";
-import Contacto from "./pages/Contacto";
+import Registro from "./pages/Registro";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
 
@@ -27,7 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/sobre-nosotros" element={<SobreNosotros />} />
         <Route path="/servicios" element={<Servicios />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/registro" element={<Registro />} />
       </Routes>
     </AnimatePresence>
   );

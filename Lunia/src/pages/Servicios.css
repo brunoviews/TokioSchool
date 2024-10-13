@@ -1,0 +1,28 @@
+.servicio-container {
+    background-color: #20232a;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 75%;
+    
+}
+
+.servicio-container p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+
+
+
+
+.servicio-container-section h4 {
+    color: #e06c75;
+    justify-content: center;
+    text-align: justify;
+    
+}

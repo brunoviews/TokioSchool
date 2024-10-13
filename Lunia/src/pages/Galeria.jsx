@@ -2,6 +2,7 @@ import React from 'react';
 import Imagen from '../components/Imagen';
 import Video from '../components/Video';
 import { motion } from 'framer-motion';
+import './Galeria.css';
 
 const Galeria = () => {
 
@@ -45,7 +46,7 @@ const Galeria = () => {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
     >
-      <div className='container'>
+      <div className='container-info'>
         <p><strong>VIT</strong>: Los personajes centrados en vitalidad suelen usar ataques físicos y cuerpo a cuerpo contra los monstruos, pero no excluyen ataques mágicos e inmunes. Tienen mayor HP y recuperación de HP, lo que los hace más recomendables para enfrentar jefes y liderar durante batallas en equipo.</p>
         <p><strong>INT</strong>: Los personajes centrados en inteligencia usan ataques mágicos, pero sin excluir ataques físicos, generalmente a larga distancia o en área. Tienen una mayor tasa de MP y recuperación de MP, siendo recomendables para limpiar corredores y enfrentar oleadas de monstruos, además de apoyar al equipo.</p>
         <p><strong>DEX</strong>: Los personajes centrados en destreza tienen tanto ataques mágicos como físicos, en área o ataques focalizados. Al alcanzar cierto nivel, pueden rotar sus habilidades sin "retraso", es decir, sin tiempo de espera. Tienen una mayor tasa de daño crítico, sin embargo, tienden a usar mucho MP y no tienen tanto HP en comparación con otras clases, siendo recomendables para juegos híbridos y de control.</p>

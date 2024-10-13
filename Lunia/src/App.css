@@ -1,360 +1,108 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Estilos generales para la página */
-  html, body {
-    font-family: 'Poppins', sans-serif; 
-    background-color: #1a1a1d;
-    color: #f2f2f2; 
-    line-height: 1.6;
-    min-height: 100vh;
-    scroll-behavior: smooth; 
-  }
-  
-  /* Espaciado y estructura general */
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  /* Encabezado de la página */
-  header {
-    background-color: #0d0d0d; 
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 2px solid #ff007f; 
-  }
-  
-  header h1 {
-    color: #ff007f; 
-    font-size: 2rem; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Estilos del menú de navegación */
-  nav {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-   background-color: #ff007f;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  nav a:hover {
-    text-decoration: underline; 
-    color: black;
-    transition: ease 0.3s;
-    text-shadow: 0 0 5px rgba(11, 11, 11, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
-    background-color: white;
-  }
-  
-
-  /* Estilos del pie de página */
-  .footer {
-    background-color: #1f1f1f; 
-    color: white; 
-    
-    text-align: center; 
-    padding: 20px; 
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); 
-  }
-  
-  .footer-text {
-    margin: 5px 0; 
-    font-size: 0.9rem; 
-  }
-  
-  .footer-link {
-    color: #ff007f; 
-    text-decoration: none; 
-    margin: 0 10px; 
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline; 
-    color: white;
-    transition: ease 0.3s;
-    text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
-  }
-  
-  
-  /* Responsividad general */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    nav a {
-      font-size: 1rem;
-    }
-  
-    header h1 {
-      font-size: 1.5rem;
-    }
-  }
-  
-  
-
-
-/* Estilo general de la galería */
-.galeria-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 15px; /* Espacio entre las imágenes */
-    padding: 20px;
-    background-color: #121212; 
-  }
-  
-  /* Contenedor de cada imagen */
-  .imagen-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s ease; 
-    
-    
-  }
-  
-  .imagen-container:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-  }
-  
-  /* Imágenes dentro de la galería */
-  .imagen-galeria {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    
-  }
-  
-  /* Efecto de brillo al pasar el mouse */
-  .imagen-container:hover .imagen-galeria {
-    filter: brightness(1.2);
-  }
-  
-  /* Efecto de superposición */
-  .imagen-container:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(255, 0, 150, 0.5));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .imagen-container:hover:before {
-    opacity: 1;
-  }
-  
-  /* Responsivo para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    .galeria-container {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-    }
-  }
-  
-  /* Título de los personajes en la galería */
-.personajes-titulo {
-    font-size: 1.2rem; 
-    font-weight: bold; 
-    text-align: center; 
-    color: #ff007f; 
-    text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5); /* Efecto de neón */
-    margin-top: 10px; 
-    letter-spacing: 1px; 
-    text-transform: uppercase; 
-    transition: color 0.3s ease, text-shadow 0.3s ease; /
-  }
-  
-  .personajes-titulo:hover {
-    color: #ff33aa; /* Cambio de color al pasar el mouse */
-    text-shadow: 0 0 10px rgba(255, 51, 170, 0.85), 0 0 20px rgba(255, 51, 170, 0.65); /* Efecto neón más fuerte */
-  }
-  
-  .video-container {
-    margin: 20px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  }
-  
-  .video-galeria {
-    width: 100%;
-    height: auto; /* Mantener proporción del video */
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
-  }
-
- 
-  .galeria-video-container {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los videos se ajusten a múltiples líneas */
-    justify-content: center; /* Centrar videos */
-    padding: 20px; /* Espaciado alrededor del contenedor */
-  }
-
-
-
-
-
-
-
-
-  /* Estilos generales para el nav */
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px; /* Limitar ancho */
-    margin: 0 auto; /* Centrar el nav */
-    padding: 0 20px; /* Espaciado lateral */
-  }
-  
-  /* Estilo del botón de menú */
-  .menu-toggle {
-    display: none; /* Ocultarlo por defecto */
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  /* Estilo de las links */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px; /* Espaciado entre links */
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #ff007f;
-  }
-  
-  
-
-  
-  /* Media Query para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block; /* Mostrar el botón de menú en pantallas pequeñas */
-    }
-  
-    .nav-links {
-      display: none; /* Ocultar los links por defecto */
-      flex-direction: column; /* Colocar en columna */
-      position: absolute; /* Posicionar el menú de forma absoluta */
-      top: 60px; /* Colocar debajo del nav */
-      left: 0;
-      right: 0;
-      background-color: #0d0d0d; /* Fondo del menú */
-      z-index: 10; /* Asegurarse de que esté encima */
-      padding: 20px;
-    }
-  
-    .nav-links.open {
-      display: flex; /* Mostrar el menú cuando está abierto */
-    }
-  
-    .nav-links a {
-      padding: 10px; /* Espaciado más pequeño en el menú */
-      width: 100%; /* Hacer que los enlaces ocupen el ancho completo */
-      text-align: center; /* Centrar texto */
-    }
-  }
-
-  /* Estilo del logo */
-.logo {
-    font-size: 1.5rem;
-    color: #fff; 
-    font-weight: bold; 
-    text-decoration: none; 
-    transition: color 0.3s ease; 
-    margin: 15px;
-    
-  }
-  
-  .logo:hover {
-    
-    text-decoration: underline; 
-    color: white;
-    transition: ease 0.3s;
-    text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
-  }
-  
-
-.FooterImage{
-  position: relative;  
-  text-align: center  ;
+/* Estilos generales para la página */
+html,
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #232424;
+  color: #f2f2f2;
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Espaciado y estructura general */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Encabezado de la página */
+header {
+  background-color: #0d0d0d;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #ff007f;
+}
+
+header h1 {
+  color: #ff007f;
+  font-size: 2rem;
   text-transform: uppercase;
-  font-size: 1.0rem; 
-  font-weight: bold; 
-  text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5); 
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estilo del logo */
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 15px;
+}
+ 
+.logo{
+  text-decoration: underline;
+  color: white;
+  transition: ease 0.3s;
+  text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
+  transform-origin: left top;
+  animation: 1s infinite alternate;
   
 }
 
-.container-inicio{ 
-  background-color: #20232a; 
-  color: white; 
+.container-inicio {
+  background-color: #20232a;
+  color: white;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   line-height: 1.6;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0 auto;
   margin-bottom: 20px;
   width: 75%;
-  
 }
-.container-inicio ul{
+
+.container-inicio ul {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
+
 .container {
-  background-color: #20232a; 
-  color: white; 
+  background-color: #20232a;
+  color: white;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   line-height: 1.6;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   align-items: center;
 }
 
@@ -366,25 +114,25 @@
 
 .container strong {
   color: #e06c75;
-  
 }
 
-.title{
+.title {
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
+  text-shadow: 0 0 5px rgba(255, 0, 127, 0.75), 0 0 5px rgba(255, 0, 127, 0.5);
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-.container-about{
-  background-color: #20232a; 
-  color: white; 
+.container-about {
+  background-color: #20232a;
+  color: white;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   line-height: 1.6;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   align-items: center;
 }
 
@@ -396,16 +144,14 @@
 
 .container-about strong {
   color: #e06c75;
-  
 }
 
-.container-about section{
+.container-about section {
   margin: 20px 0;
   border-bottom: solid white 1px;
- 
 }
 
-abbr{
+abbr {
   text-decoration: none;
 }
 
@@ -420,10 +166,9 @@ abbr{
   margin-bottom: 20px;
 }
 
-.mini-logo{
-  text-decoration: underline; 
+.mini-logo {
+  text-decoration: underline;
   color: white;
   transition: ease 0.3s;
   text-shadow: 0 0 2px rgba(255, 0, 127, 0.75), 0 0 10px rgba(255, 0, 127, 0.5);
-
 }

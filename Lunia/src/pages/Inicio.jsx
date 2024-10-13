@@ -11,7 +11,7 @@ const Inicio = () => {
         transition={{ duration: 0.2 }}
       >
         <div className="container-inicio">
-          <h1 className="title">Bienvenido a Lunia Z </h1>
+          <h1 className="title">Bienvenido a Lunia Z  </h1>
           <p>
           <strong className="mini-logo">Lunia Z</strong>, un juego que contrasta incluso hoy en día entre muchos
             MMORPGs en el mercado, se juega como un arcade de acción, con una

@@ -1,8 +1,10 @@
 import FooterImagen from '../components/FooterImagen';
+import './Video.css';
 
 const Video = ({ src, alt }) => {
     const videoId = src.split('/').pop().split('?')[0];
     return (
+        <div className='video-container-main'>
         <div className='video-container'>
           <FooterImagen text={alt} />
           <iframe 
@@ -12,6 +14,7 @@ const Video = ({ src, alt }) => {
             title={alt} 
             allowFullScreen 
           ></iframe>
+        </div>
         </div>
     )
   };

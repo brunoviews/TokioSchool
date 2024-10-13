@@ -1,0 +1,41 @@
+
+.video-container-main {
+    background-color: #20232a;
+}
+
+.video-container {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+   
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    
+}
+
+.video-galeria {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.galeria-video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-container-main:hover{
+    filter: brightness(1.2);
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+
+

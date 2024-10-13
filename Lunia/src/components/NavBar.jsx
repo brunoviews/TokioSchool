@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Estado para el menú
+  const [isOpen, setIsOpen] = useState(false); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,7 +12,7 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav-container">
-        <h1 className="logo">Lunia</h1>
+        <h1 className="logo">Lunia Gaming Zone</h1>
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
         </button>
@@ -20,7 +21,7 @@ const NavBar = () => {
           <li><Link to="/galeria">Personajes</Link></li>
           <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
           <li><Link to="/servicios">Servicios</Link></li>
-          <li><Link to="/contacto">Contacto</Link></li>
+          <li><Link to="/registro">Registro</Link></li>
         </ul>
       </div>
     </nav>
