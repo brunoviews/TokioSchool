@@ -1,28 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Imagen from '../components/Imagen';
 import Video from '../components/Video';
 import { motion } from 'framer-motion';
+
 import './Galeria.css';
 
 const Galeria = () => {
 
   const imagenes = [
-    { src: './img/arta.webp', alt: 'Arta' },
-    { src: './img/gaon.webp', alt: 'Gaon' },
-    { src: './img/ralph.webp', alt: 'Ralph' },
-    { src: './img/sieg.webp', alt: 'Sieg' },
-    { src: './img/dacy.png', alt: 'Dacy' },
-    { src: './img/krieg.webp', alt: 'Krieg' },
-    { src: './img/ryan.jpg', alt: 'Ryan' },
-    { src: './img/tia.webp', alt: 'Tia' },
-    { src: './img/deir.jpg', alt: 'Dark Eir' },
-    { src: './img/iris.webp', alt: 'Iris' },
-    { src: './img/arien.webp', alt: 'Arien' },
-    { src: './img/eir.jpg', alt: 'Eir' },
-    { src: './img/asuka.webp', alt: 'Asuka' },
-    { src: './img/yuki.webp', alt: 'Yuki' },
-    { src: './img/kali.webp', alt: 'Kali' }
+    { src: './img/arta.webp', alt: 'Arta', skill:["VIT", "DANO"] },
+    { src: './img/gaon.webp', alt: 'Gaon', skill:["VIT", "DANO"] },
+    { src: './img/ralph.webp', alt: 'Ralph', skill:["VIT", "DANO","VELOCIDAD"] },
+    { src: './img/sieg.webp', alt: 'Sieg', skill:["VIT", "DANO"] },
+    { src: './img/dacy.png', alt: 'Dacy', skill:["INT", "DANO"] },
+    { src: './img/krieg.webp', alt: 'Krieg', skill:["VIT", "DANO", "CURA"] },
+    { src: './img/ryan.jpg', alt: 'Ryan', skill:["DEX", "DANO", "VELOCIDAD"] },
+    { src: './img/tia.webp', alt: 'Tia', skill:["DEX", "DANO", "VELOCIDAD"] },
+    { src: './img/deir.jpg', alt: 'Dark Eir',skill:["VIT", "DANO", "CURA"] },
+    { src: './img/iris.webp', alt: 'Iris', skill:["DEX", "DANO"] },
+    { src: './img/arien.webp', alt: 'Arien',skill:["DEX", "DANO", "VELOCIDAD"] },
+    { src: './img/eir.jpg', alt: 'Eir',skill:["VIT", "DANO", "CURA", "VELOCIDAD"] },
+    { src: './img/asuka.webp', alt: 'Asuka', skill:["DEX", "DANO", "VELOCIDAD"] },
+    { src: './img/yuki.webp', alt: 'Yuki', skill:["INT", "DANO"]  },
+    { src: './img/kali.webp', alt: 'Kali', skill:["INT", "DANO", "CURA", "VELOCIDAD"] },
   ];
+
+
+  const [filtroSkill, setFiltroSkill] = useState(''); 
+
+  const handleFiltro = (skill) => {
+    setFiltroSkill(skill);
+  };
+
+  // Filtra solo los personajes que tienen la skill seleccionada
+  const personajesFiltrados = filtroSkill
+    ? imagenes.filter((imagen) => imagen.skills.includes(filtroSkill))
+    : imagenes;
+
 
 
   const videos = [
@@ -57,7 +71,7 @@ const Galeria = () => {
 
       <h1 className='personajes-titulo'>Personajes:</h1>
       <div className='galeria-container' >
-        {imagenes.map((imagen, index,) => (
+        {personajesFiltrados.map((imagen, index,) => (
           <Imagen key={index} src={imagen.src} alt={imagen.alt} />
 
 
